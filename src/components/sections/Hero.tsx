@@ -12,7 +12,7 @@ export const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
           {/* Left Column: Text Content */}
-          <div className="flex-1 text-left order-2 lg:order-1">
+          <div className="flex-1 text-left order-1 lg:order-1">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -55,7 +55,7 @@ export const Hero = () => {
           </div>
 
           {/* Right Column: Expert Photo */}
-          <div className="flex-1 relative order-1 lg:order-2 w-full max-w-lg lg:max-w-none">
+          <div className="flex-1 relative order-2 lg:order-2 w-full max-w-lg lg:max-w-none">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, x: 50 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
