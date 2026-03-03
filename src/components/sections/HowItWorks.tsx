@@ -10,20 +10,20 @@ export const HowItWorks = () => {
     {
       icon: <FileText className="w-8 h-8 text-white" />,
       step: "PASSO 1",
-      title: "O Primeiro Passo",
-      description: "Você já deu o passo mais importante preenchendo o formulário das anúncios. Agora, vamos conectar essas informações."
+      title: "Cadastro Concluído",
+      description: "Suas informações foram recebidas. Esse passo já foi concluído."
     },
     {
       icon: <Search className="w-8 h-8 text-white" />,
       step: "PASSO 2",
-      title: "Nossa Conexão",
-      description: "Ao clicar no botão, você será direcionada para o meu WhatsApp pessoal para validarmos seu momento e objetivos."
+      title: "Agendar Horário",
+      description: "O que você precisa fazer agora: clique no botão para agendar nossa conversa."
     },
     {
       icon: <Calendar className="w-8 h-8 text-white" />,
       step: "PASSO 3",
-      title: "Sua Transformação",
-      description: "Se houver alinhamento, agendaremos sua Sessão de Diagnóstico Online para traçar seu plano de reordenação."
+      title: "Iniciar Tratamento",
+      description: "Após o alinhamento, damos início à sua jornada de transformação sistêmica."
     }
   ];
 
@@ -38,7 +38,7 @@ export const HowItWorks = () => {
             Como funciona após seu cadastro
           </h2>
           <p className="font-sans text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            Você já iniciou seu processo. Agora, o próximo passo é uma conversa direta para alinhar as expectativas da sua Mentoria:
+            O próximo passo é uma conversa direta para alinhar as expectativas da sua Mentoria:
           </p>
         </div>
 
