@@ -1,21 +1,20 @@
 import React from 'react';
 import { Section } from '../ui/Section';
-import { Quote } from 'lucide-react';
 
 export const Testimonials = () => {
-  const testimonials = [
-    {
-      quote: "Eu achava que meu marido era preguiçoso. Na mentoria entendi que eu não dava espaço para ele ser homem. Hoje ele lidera e eu descanso.",
-      author: "M.S., Empresária"
-    },
-    {
-      quote: "Cheguei exausta, pronta para separar. A Carina não passou a mão na minha cabeça, ela me mostrou minha responsabilidade. Foi o resgate da minha dignidade.",
-      author: "A.L., Médica"
-    },
-    {
-      quote: "Pela primeira vez em 10 anos, consegui dormir uma noite inteira sem me preocupar se a casa ia cair.",
-      author: "R.F., Advogada"
-    }
+  const col1 = [
+    "https://i.imgur.com/YGi0zKN.jpeg",
+    "https://i.imgur.com/UTwc4T8.jpeg"
+  ];
+
+  const col2 = [
+    "https://i.imgur.com/HWGV0yO.jpeg",
+    "https://i.imgur.com/yoMHWX0.jpeg"
+  ];
+
+  const col3 = [
+    "https://i.imgur.com/WeUg6im.jpeg",
+    "https://i.imgur.com/ykTHJtA.jpeg"
   ];
 
   return (
@@ -30,28 +29,33 @@ export const Testimonials = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index} 
-              className="bg-[#0F2823] p-8 md:p-10 rounded-2xl border border-[#C5A059]/20 hover:border-[#C5A059]/50 transition-colors duration-300 relative group"
-            >
-              <Quote className="absolute top-6 left-6 w-8 h-8 text-[#C5A059]/30 group-hover:text-[#C5A059] transition-colors duration-300" />
-              <p className="font-serif text-xl md:text-2xl italic leading-relaxed text-gray-200 mb-8 pt-8">
-                "{testimonial.quote}"
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#C5A059] flex items-center justify-center text-[#1A3C34] font-bold text-sm">
-                  {testimonial.author.split(',')[0].trim().substring(0, 2)}
-                </div>
-                <div>
-                  <p className="font-sans font-semibold text-[#C5A059] tracking-wide text-sm uppercase">
-                    {testimonial.author}
-                  </p>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 items-start">
+          {/* Coluna 1 */}
+          <div className="flex flex-col gap-6">
+            {col1.map((imgSrc, index) => (
+              <div key={`col1-${index}`} className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-[#C5A059]/20 hover:border-[#C5A059]/50">
+                <img src={imgSrc} alt={`Depoimento ${index + 1}`} className="w-full h-auto block" loading="lazy" />
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Coluna 2 */}
+          <div className="flex flex-col gap-6">
+            {col2.map((imgSrc, index) => (
+              <div key={`col2-${index}`} className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-[#C5A059]/20 hover:border-[#C5A059]/50">
+                <img src={imgSrc} alt={`Depoimento ${index + 3}`} className="w-full h-auto block" loading="lazy" />
+              </div>
+            ))}
+          </div>
+
+          {/* Coluna 3 */}
+          <div className="flex flex-col gap-6">
+            {col3.map((imgSrc, index) => (
+              <div key={`col3-${index}`} className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-[#C5A059]/20 hover:border-[#C5A059]/50">
+                <img src={imgSrc} alt={`Depoimento ${index + 5}`} className="w-full h-auto block" loading="lazy" />
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
     </div>
